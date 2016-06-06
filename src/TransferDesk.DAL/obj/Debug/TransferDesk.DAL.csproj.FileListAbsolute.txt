@@ -274,3 +274,15 @@ C:\Users\rajg01\Desktop\GitFolder\src\TransferDesk.DAL\bin\Debug\EntityFramework
 C:\Users\rajg01\Desktop\GitFolder\src\TransferDesk.DAL\obj\Debug\TransferDesk.DAL.csprojResolveAssemblyReference.cache
 C:\Users\rajg01\Desktop\GitFolder\src\TransferDesk.DAL\obj\Debug\TransferDesk.DAL.dll
 C:\Users\rajg01\Desktop\GitFolder\src\TransferDesk.DAL\obj\Debug\TransferDesk.DAL.pdb
+C:\Users\rajg01\Desktop\GitFolder\TransferDesk_New\src\TransferDesk.DAL\bin\Debug\TransferDesk.DAL.dll.config
+C:\Users\rajg01\Desktop\GitFolder\TransferDesk_New\src\TransferDesk.DAL\bin\Debug\TransferDesk.DAL.dll
+C:\Users\rajg01\Desktop\GitFolder\TransferDesk_New\src\TransferDesk.DAL\bin\Debug\TransferDesk.DAL.pdb
+C:\Users\rajg01\Desktop\GitFolder\TransferDesk_New\src\TransferDesk.DAL\bin\Debug\EntityFramework.dll
+C:\Users\rajg01\Desktop\GitFolder\TransferDesk_New\src\TransferDesk.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\rajg01\Desktop\GitFolder\TransferDesk_New\src\TransferDesk.DAL\bin\Debug\TransferDesk.Contracts.dll
+C:\Users\rajg01\Desktop\GitFolder\TransferDesk_New\src\TransferDesk.DAL\bin\Debug\TransferDesk.Contracts.pdb
+C:\Users\rajg01\Desktop\GitFolder\TransferDesk_New\src\TransferDesk.DAL\bin\Debug\EntityFramework.xml
+C:\Users\rajg01\Desktop\GitFolder\TransferDesk_New\src\TransferDesk.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\rajg01\Desktop\GitFolder\TransferDesk_New\src\TransferDesk.DAL\obj\Debug\TransferDesk.DAL.csprojResolveAssemblyReference.cache
+C:\Users\rajg01\Desktop\GitFolder\TransferDesk_New\src\TransferDesk.DAL\obj\Debug\TransferDesk.DAL.dll
+C:\Users\rajg01\Desktop\GitFolder\TransferDesk_New\src\TransferDesk.DAL\obj\Debug\TransferDesk.DAL.pdb

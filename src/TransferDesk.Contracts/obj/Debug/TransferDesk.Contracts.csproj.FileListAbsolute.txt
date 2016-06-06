@@ -224,3 +224,13 @@ C:\Users\rajg01\Desktop\GitFolder\src\TransferDesk.Contracts\bin\Debug\EntityFra
 C:\Users\rajg01\Desktop\GitFolder\src\TransferDesk.Contracts\obj\Debug\TransferDesk.Contracts.csprojResolveAssemblyReference.cache
 C:\Users\rajg01\Desktop\GitFolder\src\TransferDesk.Contracts\obj\Debug\TransferDesk.Contracts.dll
 C:\Users\rajg01\Desktop\GitFolder\src\TransferDesk.Contracts\obj\Debug\TransferDesk.Contracts.pdb
+C:\Users\rajg01\Desktop\GitFolder\TransferDesk_New\src\TransferDesk.Contracts\bin\Debug\TransferDesk.Contracts.dll.config
+C:\Users\rajg01\Desktop\GitFolder\TransferDesk_New\src\TransferDesk.Contracts\bin\Debug\TransferDesk.Contracts.dll
+C:\Users\rajg01\Desktop\GitFolder\TransferDesk_New\src\TransferDesk.Contracts\bin\Debug\TransferDesk.Contracts.pdb
+C:\Users\rajg01\Desktop\GitFolder\TransferDesk_New\src\TransferDesk.Contracts\bin\Debug\EntityFramework.dll
+C:\Users\rajg01\Desktop\GitFolder\TransferDesk_New\src\TransferDesk.Contracts\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\rajg01\Desktop\GitFolder\TransferDesk_New\src\TransferDesk.Contracts\bin\Debug\EntityFramework.xml
+C:\Users\rajg01\Desktop\GitFolder\TransferDesk_New\src\TransferDesk.Contracts\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\rajg01\Desktop\GitFolder\TransferDesk_New\src\TransferDesk.Contracts\obj\Debug\TransferDesk.Contracts.csprojResolveAssemblyReference.cache
+C:\Users\rajg01\Desktop\GitFolder\TransferDesk_New\src\TransferDesk.Contracts\obj\Debug\TransferDesk.Contracts.dll
+C:\Users\rajg01\Desktop\GitFolder\TransferDesk_New\src\TransferDesk.Contracts\obj\Debug\TransferDesk.Contracts.pdb

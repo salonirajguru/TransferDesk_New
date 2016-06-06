@@ -66,3 +66,8 @@ C:\Users\rajg01\Desktop\GitFolder\src\TransferDesk.UtilitiesHtml\bin\Debug\Trans
 C:\Users\rajg01\Desktop\GitFolder\src\TransferDesk.UtilitiesHtml\obj\Debug\TransferDesk.UtilitiesHtml.csprojResolveAssemblyReference.cache
 C:\Users\rajg01\Desktop\GitFolder\src\TransferDesk.UtilitiesHtml\obj\Debug\TransferDesk.UtilitiesHtml.dll
 C:\Users\rajg01\Desktop\GitFolder\src\TransferDesk.UtilitiesHtml\obj\Debug\TransferDesk.UtilitiesHtml.pdb
+C:\Users\rajg01\Desktop\GitFolder\TransferDesk_New\src\TransferDesk.UtilitiesHtml\bin\Debug\TransferDesk.UtilitiesHtml.dll
+C:\Users\rajg01\Desktop\GitFolder\TransferDesk_New\src\TransferDesk.UtilitiesHtml\bin\Debug\TransferDesk.UtilitiesHtml.pdb
+C:\Users\rajg01\Desktop\GitFolder\TransferDesk_New\src\TransferDesk.UtilitiesHtml\obj\Debug\TransferDesk.UtilitiesHtml.csprojResolveAssemblyReference.cache
+C:\Users\rajg01\Desktop\GitFolder\TransferDesk_New\src\TransferDesk.UtilitiesHtml\obj\Debug\TransferDesk.UtilitiesHtml.dll
+C:\Users\rajg01\Desktop\GitFolder\TransferDesk_New\src\TransferDesk.UtilitiesHtml\obj\Debug\TransferDesk.UtilitiesHtml.pdb

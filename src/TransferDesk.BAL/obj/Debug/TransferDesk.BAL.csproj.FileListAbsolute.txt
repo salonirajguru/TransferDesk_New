@@ -295,3 +295,16 @@ C:\Users\rajg01\Desktop\GitFolder\src\TransferDesk.BAL\bin\Debug\EntityFramework
 C:\Users\rajg01\Desktop\GitFolder\src\TransferDesk.BAL\obj\Debug\TransferDesk.BAL.csprojResolveAssemblyReference.cache
 C:\Users\rajg01\Desktop\GitFolder\src\TransferDesk.BAL\obj\Debug\TransferDesk.BAL.dll
 C:\Users\rajg01\Desktop\GitFolder\src\TransferDesk.BAL\obj\Debug\TransferDesk.BAL.pdb
+C:\Users\rajg01\Desktop\GitFolder\TransferDesk_New\src\TransferDesk.BAL\bin\Debug\TransferDesk.BAL.dll
+C:\Users\rajg01\Desktop\GitFolder\TransferDesk_New\src\TransferDesk.BAL\bin\Debug\TransferDesk.BAL.pdb
+C:\Users\rajg01\Desktop\GitFolder\TransferDesk_New\src\TransferDesk.BAL\bin\Debug\EntityFramework.dll
+C:\Users\rajg01\Desktop\GitFolder\TransferDesk_New\src\TransferDesk.BAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\rajg01\Desktop\GitFolder\TransferDesk_New\src\TransferDesk.BAL\bin\Debug\TransferDesk.Contracts.dll
+C:\Users\rajg01\Desktop\GitFolder\TransferDesk_New\src\TransferDesk.BAL\bin\Debug\TransferDesk.DAL.dll
+C:\Users\rajg01\Desktop\GitFolder\TransferDesk_New\src\TransferDesk.BAL\bin\Debug\TransferDesk.Contracts.pdb
+C:\Users\rajg01\Desktop\GitFolder\TransferDesk_New\src\TransferDesk.BAL\bin\Debug\TransferDesk.DAL.pdb
+C:\Users\rajg01\Desktop\GitFolder\TransferDesk_New\src\TransferDesk.BAL\bin\Debug\EntityFramework.xml
+C:\Users\rajg01\Desktop\GitFolder\TransferDesk_New\src\TransferDesk.BAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\rajg01\Desktop\GitFolder\TransferDesk_New\src\TransferDesk.BAL\obj\Debug\TransferDesk.BAL.csprojResolveAssemblyReference.cache
+C:\Users\rajg01\Desktop\GitFolder\TransferDesk_New\src\TransferDesk.BAL\obj\Debug\TransferDesk.BAL.dll
+C:\Users\rajg01\Desktop\GitFolder\TransferDesk_New\src\TransferDesk.BAL\obj\Debug\TransferDesk.BAL.pdb

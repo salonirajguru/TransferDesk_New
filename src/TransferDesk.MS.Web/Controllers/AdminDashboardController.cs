@@ -28,7 +28,7 @@ namespace TransferDesk.MS.Web.Controllers
         private AdminDashBoardService adminDashBoardService;
         private AdminDashBoardReposistory _adminDashBoardReposistory;
         private readonly ManuscriptDBRepositoryReadSide _manuscriptDBRepositoryReadSide;
-
+        private string errormsg = String.Empty;
         public AdminDashboardController()
         {
             string conString = string.Empty;
