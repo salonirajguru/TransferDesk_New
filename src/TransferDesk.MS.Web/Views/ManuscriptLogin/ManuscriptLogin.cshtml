@@ -1,0 +1,296 @@
+﻿@model TransferDesk.Services.Manuscript.ViewModel.ManuscriptLoginVM
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_CommanLayout.cshtml";
+}
+
+@Styles.Render("~/bundles/styles")
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/ManuscriptLogin")
+<link href="~/Content/LoginPage.css" rel="stylesheet"/>
+<link type="text/css" rel="Stylesheet" href="http://ajax.microsoft.com/ajax/jquery.ui/1.8.6/themes/smoothness/jquery-ui.css" />
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+<br />
+<br />
+<div id="tabs">
+    <ul class="nav nav-tabs">
+        <li class="active">
+            <a href="#Journal" data-toggle="tab">Journal</a>
+        </li>
+        @*<li>
+            <a href="#Book" data-toggle="tab">Book</a>
+        </li>*@
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="Journal">
+            @Html.Raw(TempData["MSIDError"])
+            @Html.Raw(TempData["msg"])
+            @using (Html.BeginForm("ManuscriptLogin", "ManuscriptLogin", FormMethod.Post, new { enctype = "multipart/form-data", id = "myform" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.HiddenFor(x=>x.CrestId)
+                <div class="container">
+                    <div class="table-responsive">
+                        <table class="table MetadataInfo">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span>Service Type<span class="asterik">* </span></span>
+                                    </td>
+                                    <td>
+                                        @Html.DropDownListFor(x => x.ServiceTypeID, new SelectList(Model._serviceType, "ID", "Description"), "Select-Service Type", new { @class = "form-control input-sm" })
+                                        
+                                    </td>
+                                    <td>Journal Title<span class="asterik">*</span></td>
+                                    <td>
+                                        @Html.DropDownListFor(x => x.JournalID, new SelectList(Model._journal, "ID", "JournalTitle"), "Select-Journal Title", new { @class = "form-control input-sm", id = "ddlJournalTitle" })
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Manuscript Number<span class="asterik">* </span></td>
+                                    <td style="display:inline-flex">
+                                        @Html.TextBoxFor(x => x.MSID, new { placeholder = "Please, Enter Manuscript Number", @class = "form-control input-sm", style = "width: 260px;" })
+                                        &nbsp;&nbsp;&nbsp;
+                                        @Html.CheckBoxFor(x => x.IsRevision, new { disabled = "disabled" })&nbsp;Revision
+                                    </td>
+                                    <td>Article Type<span class="asterik">*</span></td>
+                                    <td>
+                                        @Html.DropDownListFor(x => x.ArticleTypeID, new SelectList(Model._articleType, "ID", "ArticleTypeName"), "Select-ArticleType", new { @class = "form-control input-sm", id = "ddlArticleType" })
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Section</td>
+                                    <td>
+                                        @Html.DropDownListFor(x => x.SectionID, new SelectList(Model._section, "ID", "SectionName"), "Select-Section", new { @class = "form-control input-sm", id = "ddlSectionType" })
+                                    </td>
+                                    <td>Journal Link<span class="asterik">*</span></td>
+                                    <td>
+                                        <div id="JournalLink"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Article Title<span class="asterik">*</span></td>
+                                    <td>
+                                        @Html.TextAreaFor(model => model.ArticleTitle, new { @class = "form-control input-sm", placeholder = "Please, Enter Article Title" })
+                                    </td>
+                                    <td>Special Instruction</td>
+                                    <td>
+                                        @Html.TextAreaFor(model => model.SpecialInstruction, new { @class = "form-control input-sm", placeholder = "Please, Enter Special Instruction" })
+                                    </td>
+                                </tr>
+                            <tr>
+                                <td>Associate</td>
+                                <td>
+                                    @Html.TextBoxFor(model => model.Associate, new {@class = "form-control input-sm", placeholder = "Please, Enter Associate"})
+                                </td>
+                                <td>Initial Submission Date<span class="asterik">*</span></td>
+                                <td>
+                                    @Html.TextBoxFor(model => model.InitialSubmissionDate, new {@class = "form-control input-sm", @Value = Model.InitialSubmissionDate.ToString("d"), placeholder = "dd/mm/yyyy"})
+                                </td>
+                            </tr>
+                                <tr>
+                                    <td>Task</td>
+                                    <td>
+                                        @Html.DropDownListFor(model => model.TaskID, new SelectList(Model._TaskList, "ID", "Description"), "Select-Task", new { @class = "form-control input-sm" })
+                                    </td>
+                                    <td>Received Date<span class="asterik">*</span></td>
+                                    <td>
+                                        @Html.TextBoxFor(model => model.ReceivedDate, new { @class = "form-control input-sm", @Value = (Model.ReceivedDate.HasValue ? Model.ReceivedDate.Value.ToShortDateString() : null), placeholder = "dd/mm/yyyy" })
+                                    </td>
+                                </tr>
+                           
+                                <tr>
+                                    @*<td>Auto Assignment</td>
+                                    <td><input type="checkbox" value=" " /></td>*@
+                                    <td colspan="4" align="right">
+                                        <input type="submit" value="Login" id="btnLogin" class="btn btn-primary btn-sm" />
+                                        <input type="button" value="Reset" id="btnReset" class="btn btn-primary btn-sm" />
+                                        <input type="button" value="Export To Excel" id="btnExporttoExcel" class="btn btn-primary btn-sm" data-target="#myModal" />                                      
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                @Html.ValidationSummary("Following fields are mandatory:", new { @class = "alert alert-danger" })
+            }
+            <div id="myModal" class="modal fade" data-backdrop="static" data-dismiss="modal" >
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <b>Export To Excel</b>
+                            <button type="button" class="close" data-dismiss="modal" name="ClosePopup" aria-hidden="true">&times;</button>
+                        </div>
+                        <div align="center" class="modal-body col-lg-12">
+                            <table style="margin-left: 10px;">
+                                <tr>
+                                    <td class="col-lg-2">
+                                        <label style="padding-top: 5px;">From Date</label>
+                                    </td>
+                                    <td class="col-lg-4" style="padding-left: 25px">
+                                        @Html.TextBox("FromDate", "", new { @class = "datepicker1", placeholder = "dd/mm/yyyy" })
+                                    </td>
+                                    <td class="col-lg-2" style="padding-left: 20px">
+                                        <label style="padding-top: 5px;">To Date</label>
+                                    </td>
+                                    <td class="col-lg-4" style="padding-left: 10px">
+                                        @Html.TextBox("ToDate", "", new { @class = "datepicker1", placeholder = "dd/mm/yyyy" })
+                                    </td>
+                                </tr>
+                            </table>
+                            <br />
+                            <div class="modal-footer">
+                                <button type="button" id="btnOk" class="btn btn-default btn-sm">Ok</button>
+                                <button type="button" id="btnClose" class="btn btn-default btn-sm" data-dismiss="modal" name="ClosePopup">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <table class="table-bordered table-striped table-hover loginJobs">
+                    <thead>
+                        <tr>
+                            <th width="150px">
+                                MSID
+                            </th>
+                            <th width="100px">
+                                Crest ID
+                            </th>
+                            <th width="250px">
+                                JournalTitle
+                            </th>
+                            <th width="100px">
+                                Assigned To
+                            </th>
+                            <th width="150px">
+                                ServiceType
+                            </th>
+                            <th width="300px">
+                                Special Instruction
+                            </th>
+                            <th width="100px">
+                                Action
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.manuscriptLoginedJobs)
+                        {
+                            <tr>
+                                <td width="150px">
+                                    @item.MSID
+                                </td>
+                                <td width="100px">
+                                    @item.CrestId
+                                </td>
+                                <td width="250px">
+                                    @item.JournalTitle
+                                </td>
+                                <td width="100px">
+                                    @item.Associate
+                                </td>
+                                <td width="150px">
+                                    @item.ServiceType
+                                </td>
+                                <td width="300px">
+                                    @item.SpecialInstruction
+                                </td>
+                                <td class="hide">
+                                    @item.ArticleTypeName
+                                </td>
+                                <td class="hide">
+                                    @item.SectionName
+                                </td>
+                                <td class="hide">
+                                    @item.ArticleTitle
+                                </td>
+
+                                <td class="hide">
+                                    @item.InitialSubmissionDate.ToString("d")
+                                </td>
+                                <td width="84px">
+                                    <input type="button" id="btnEdit" class="btn btn-primary btn-sm editButton" style="line-height: normal;" value="Edit" />
+                                </td>
+                            </tr>
+                        }
+                    </tbody>                    
+                </table>            
+        </div>
+
+        <div class="tab-pane" id="Book">
+            @using (Html.BeginForm("_BookInfo", "Login", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+                <div class="container">
+                    <div class="table-responsive">
+                        <table class="table MetadataInfo">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span>Service Type<span class="asterik">*</span></span>
+                                    </td>
+                                    <td>
+                                        @Html.DropDownList("ServiceType", new SelectList(Model._serviceType, "ID", "Description"), "Select-Service Type", new { @class = "form-control input-sm" })
+                                    </td>
+                                    <td>Book Title<span class="asterik">* </span></td>
+                                    <td>
+                                        <input type="text" placeholder="Please, Enter Book Title" class="form-control input-sm" id="txtBookTitle" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Chapter No.<span class="asterik">* </span></td>
+                                    <td>
+                                        <input type="number" class="form-control input-sm" id="txtChapterNo" placeholder="Please, Enter Chapter Number" />
+                                    </td>
+                                    <td>Chapter Title<span class="asterik">* </span></td>
+                                    <td>
+                                        <input type="text" placeholder="Please, Enter Chapter Title" class="form-control input-sm" id="txtChapterTitle" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Page Count<span class="asterik">* </span></td>
+                                    <td>
+                                        <input type="number" class="form-control input-sm" id="txtPageCount" placeholder="Please, Enter Page Count" />
+                                    </td>
+                                    <td>Browse</td>
+                                    <td>
+                                        <input type="file" class="form-control input-sm" id="txtBookBrowse" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Special Instruction</td>
+                                    <td>
+                                        <textarea class="form-control input-sm" placeholder="Please, Enter Special Instruction"></textarea>
+                                    </td>
+                                    <td>Received Date<span class="asterik">* </span></td>
+                                    <td>
+                                        <input type="date" class="form-control input-sm" id="InitialDateSubmission" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Associate<span class="asterik">* </span></td>
+                                    <td>
+                                        <input type="text" class="form-control input-sm" id="txtAssociate" placeholder="Please, Enter Associate" />
+                                    </td>
+                                    <td colspan="2">
+                                        <input type="checkbox" value=" " />
+                                        Auto Assignment
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td colspan="4" align="right">
+                                        <input type="submit" value="Login" id="btnLogin" class="btn btn-primary btn-sm" />
+                                        <input type="reset" value="Reset" id="btnReset" class="btn btn-primary btn-sm" />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    
+</div>

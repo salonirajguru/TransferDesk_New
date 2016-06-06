@@ -1,0 +1,3 @@
+D:\Transferdesk\TransferDesk.WebView.Test\obj\Debug\TransferDesk.WebView.Test.csprojResolveAssemblyReference.cache
+D:\Manuscript Project\Iteration 8_QA\TransferDesk.WebView.Test\obj\Debug\TransferDesk.WebView.Test.csprojResolveAssemblyReference.cache
+C:\Users\rajg01\Desktop\MS-Iteration-9_Integarted\TransferDesk_Dev\src\TransferDesk.WebView.Test\obj\Debug\TransferDesk.WebView.Test.csprojResolveAssemblyReference.cache
